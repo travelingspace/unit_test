@@ -25,3 +25,8 @@ class TestShapeArea(TestCase):
         self.assertEqual(0, area.triangle_area(10,0))
 
         self.assertEqual(0, area.triangle_area(0,4))
+
+class TestShapeAreasCircles(TestCase):
+
+    def test__circle_area(self):
+        self.assertAlmostEqual(5, area.circle_area(2))
