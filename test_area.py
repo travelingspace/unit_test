@@ -29,4 +29,11 @@ class TestShapeArea(TestCase):
 class TestShapeAreasCircles(TestCase):
 
     def test__circle_area(self):
-        self.assertAlmostEqual(5, area.circle_area(2))
+        self.assertAlmostEqual(12.566370614359172, area.circle_area(2))
+        
+    def test_circle_area_radius_0(self): 
+        self.assertAlmostEqual(0, area.circle_area(0))
+
+    def test_circle_area_negative_radius(self):
+        with self.assertRaises(ValueError):
+            area.circle_area(-3)
